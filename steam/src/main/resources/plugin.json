@@ -1,0 +1,5 @@
+{
+  "name": "steam-module",
+  "version": "${rootProject.version}",
+  "main": "com.noobnuby.plugin.Main"
+}
