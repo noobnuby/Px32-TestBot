@@ -1,6 +1,7 @@
 package com.noobnuby.plugin
 
 import com.noobnuby.plugin.command.Steam
+import com.noobnuby.plugin.handler.ButtonClick
 import net.projecttl.p.x32.api.Plugin
 import net.projecttl.p.x32.api.command.commandHandler
 
@@ -9,7 +10,7 @@ class Main : Plugin() {
 
 		logger.info("Enable Steam plugin!")
 
-//		addHandler(Ready)
+		addHandler(ButtonClick)
 		addHandler(commandHandler { handler ->
 			handler.addCommand(Steam)
 		})

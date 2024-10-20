@@ -15,5 +15,6 @@ data class SteamSaleData(
 	val start_dt: String,
 	val end_dt: String,
 	val total_cn: Int,
-	val list: List<SteamSaleData>
+	val list: List<SteamSaleData>,
+	val more_fl: Boolean
 )

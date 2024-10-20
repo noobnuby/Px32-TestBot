@@ -9,17 +9,16 @@ repositories {
 	mavenCentral()
 }
 
-//tasks {
-//	shadowJar {
-//		archiveBaseName.set(rootProject.name)
-//		archiveClassifier.set("")
-//		archiveVersion.set("")
-//
-//		manifest {
-//			attributes["Main-Class"] = "com.noobnuby.plugin.MainKt"
-//		}
-//	}
-//}
+tasks {
+	shadowJar {
+		doLast {
+			copy {
+				from(archiveFile)
+				into(File("C:\\Users\\user\\Desktop\\px32\\plugins"))
+			}
+		}
+	}
+}
 
 kotlin {
 	jvmToolchain(21)

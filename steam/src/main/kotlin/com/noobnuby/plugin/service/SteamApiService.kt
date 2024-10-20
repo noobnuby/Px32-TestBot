@@ -17,14 +17,14 @@ object SteamApiService {
 		BrowserUserAgent()
 	}
 
-	suspend fun getSales(): SteamSaleData {
-		val url = "https://steamsale.windbell.co.kr/api/v1/sales/currents?keyword=&page=1&size=5"
+	suspend fun getSales(page: Int = 1): SteamSaleData {
+		val url = "https://steamsale.windbell.co.kr/api/v1/sales/currents?keyword=&page=${page}&size=5"
 
 		return client.get(url).body()
 	}
 
-	suspend fun getHotSales(): SteamSaleData {
-		val url = "https://steamsale.windbell.co.kr/api/v1/sales/tops?page=1&size=5"
+	suspend fun getHotSales(page: Int = 1): SteamSaleData {
+		val url = "https://steamsale.windbell.co.kr/api/v1/sales/tops?page=${page}&size=5"
 
 		return client.get(url).body()
 	}
